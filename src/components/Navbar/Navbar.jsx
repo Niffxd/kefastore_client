@@ -1,55 +1,26 @@
 import style from './Navbar.module.css';
 
-export default function Navbar () {
-  const links = [
-    {
-      link: '/',
-      text: 'Home'
-    },
-    {
-      link: '/categories',
-      text: 'Categories'
-    },
-    {
-      link: '/products',
-      text: 'Products'
-    },
-    {
-      link: '/features',
-      text: 'Features'
-    },
-    {
-      link: '/blog',
-      text: 'Blog'
-    },
-    {
-      link: '/about-us',
-      text: 'About Us'
-    },
-    {
-      link: '/join-us',
-      text: 'Join Us'
-    }
-  ];
-
+export default function Navbar ({ links, Link }) {
   return (
-    <div className={style.navbar}>
+    <nav className={style.navbar}>
       <div className={style.container_nav}>
         <img src='' alt='logo' />
         <ul className={style.links_nav}>
           {
             links.map(({ link, text }) => {
               return (
-                <li key={link}>{text}</li>
+                <Link key={text} to={link}>
+                  <li>{text}</li>
+                </Link>
               );
             })
           }
         </ul>
       </div>
       <div>
-        <button className={style.sign_in}>Sign In</button>
-        <button className={style.sign_up}>Sign Up</button>
+        <Link><button className={style.sign_in}>Sign In</button></Link>
+        <Link><button className={style.sign_up}>Sign Up</button></Link>
       </div>
-    </div>
+    </nav>
   );
 }

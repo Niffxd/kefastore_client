@@ -8,7 +8,7 @@
   border-bottom: 1px solid;
 }
 
-.navbar > div > button {
+.navbar > div > a > button {
   padding: 7px 12px;
   border: none;
   border-radius: 5px;
@@ -29,7 +29,12 @@
   list-style: none;
 }
 
-.links_nav > li {
+.links_nav > a {
+  color: #000;
+  text-decoration: none;
+}
+
+.links_nav > a > li {
   margin: 0 15px;
   cursor: pointer;
 }
