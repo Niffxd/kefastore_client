@@ -5,20 +5,23 @@ export default function Footer ({ links, Link }) {
     <footer className={style.footer}>
       <div className={style.footer_container_categories}>
         {
-          links.map(({ link, text, content }) => {
-            return (
-              <Link to={link} key={text}>
-                <ul className={style.categories_container}>
-                  {
-                    content?.map(item => {
-                      return (
-                        <li key={item}>{item}</li>
-                      );
-                    })
-                  }
-                </ul>
-              </Link>
-            );
+          links.map(({ text, content }) => {
+            return text !== 'Home'
+              ? <div className={style.categories}>
+                  {text}
+                  <ul className={style.categories_container}>
+                    {
+                      content?.map(({ link, text }) => {
+                        return (
+                          <Link to={link} key={text}>
+                            <li>{text}</li>
+                          </Link>
+                        );
+                      })
+                    }
+                  </ul>
+                </div>
+              : '';
           })
         }
       </div>

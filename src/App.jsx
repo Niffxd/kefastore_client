@@ -13,51 +13,123 @@ function App () {
       link: '/categories',
       text: 'Categories',
       content: [
-        'Technology',
-        'Clothes',
-        'Food',
-        'Music',
-        'Books',
-        'Movies',
-        'Games',
-        'Other'
+        {
+          link: '/categories/technology',
+          text: 'Technology'
+        },
+        {
+          link: '/categories/clothes',
+          text: 'Clothes'
+        },
+        {
+          link: '/categories/food',
+          text: 'Food'
+        },
+        {
+          link: '/categories/music',
+          text: 'Music'
+        },
+        {
+          link: '/categories/books',
+          text: 'Books'
+        },
+        {
+          link: '/categories/movies',
+          text: 'Movies'
+        },
+        {
+          link: '/categories/games',
+          text: 'Games'
+        },
+        {
+          link: '/categories/other',
+          text: 'Other'
+        }
       ]
     },
     {
       link: '/products',
       text: 'Products',
       content: [
-        'Technology',
-        'Clothes',
-        'Food',
-        'Music',
-        'Books',
-        'Movies',
-        'Games',
-        'Other'
+        {
+          link: '/categories/products/iphone',
+          text: 'iPhone'
+        },
+        {
+          link: '/categories/products/ipad',
+          text: 'iPad'
+        },
+        {
+          link: '/categories/products/ipod',
+          text: 'iPod'
+        },
+        {
+          link: '/categories/products/imac',
+          text: 'iMac'
+        },
+        {
+          link: '/categories/products/macbook',
+          text: 'Macbook'
+        }
       ]
     },
     {
       link: '/features',
       text: 'Features',
       content: [
-        'Technology',
-        'Clothes',
-        'Food',
-        'Music',
-        'Books',
-        'Movies',
-        'Games',
-        'Other'
+        {
+          link: 'features/phones',
+          text: 'Phones'
+        },
+        {
+          link: 'features/notebooks',
+          text: 'Notebooks'
+        },
+        {
+          link: 'features/home',
+          text: 'Home'
+        }
       ]
     },
     {
       link: '/blog',
-      text: 'Blog'
+      text: 'Blog',
+      content: [
+        {
+          link: '/blog/news',
+          text: 'News'
+        },
+        {
+          link: '/blog/posts',
+          text: 'Posts'
+        },
+        {
+          link: '/blog/trending',
+          text: 'Trending'
+        }
+      ]
     },
     {
       link: '/about-us',
-      text: 'About Us'
+      text: 'About Us',
+      content: [
+        {
+          link: '/about-us/team',
+          text: 'Team'
+        },
+        {
+          link: '/about-us/contact',
+          text: 'Contact'
+        },
+        {
+          link: '/about-us/services',
+          text: 'Services'
+        },
+        {
+          link: '/about-us/partners',
+          text: 'Partners'
+        }
+      ]
     },
     {
       link: '/join-us',
